@@ -28,7 +28,7 @@ $ pnpm start
 ## Clone to local
 
 ```bash
-$ npx degit tingminitime/oauth-server-example <your-project-name>
+$ npx degit tingminitime/fastify-template <your-project-name>
 $ cd <your-project-name>
 $ pnpm install
 ```

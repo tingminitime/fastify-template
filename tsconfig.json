@@ -1,0 +1,43 @@
+// see: https://www.totaltypescript.com/concepts/option-module-must-be-set-to-nodenext-when-option-moduleresolution-is-set-to-nodenext
+
+// see: https://www.totaltypescript.com/relative-import-paths-need-explicit-file-extensions-in-ecmascript-imports
+
+{
+  "extends": "fastify-tsconfig",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types/globals.d.ts"
+    ],
+    "allowImportingTsExtensions": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedParameters": true,
+    "noEmit": true,
+    "outDir": "./dist",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/types/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "eslint.config.js"
+  ],
+  "ts-node": {
+    "esm": true
+  }
+}
